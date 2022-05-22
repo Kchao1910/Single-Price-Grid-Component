@@ -81,7 +81,7 @@ h2, .price, p, .cta-link {
   display: flex;
   font-size: 2rem;
   letter-spacing: -.4px;
-  line-height: 2.338125rem;
+  line-height: 2.3125rem;
   margin-bottom: .25rem;
   align-items: center;
 }
@@ -110,7 +110,9 @@ h2, .price, p, .cta-link {
 }
 
 .trial  {
+  line-height: 1.625rem;
   margin-bottom: 1.625rem;
+  letter-spacing: -.2px;
 }
 
 button {
