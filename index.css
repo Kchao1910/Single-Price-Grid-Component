@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --light-cyan:  	hsl(178, 48%, 52%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsla(205, 44%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+html, a {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--light-gray);
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+main {
+  border-radius: .5rem;
+  box-shadow: 0px 15px 30px 0px hsla(212, 100%, 33%, 0.15);
+  display: grid;
+  grid-template-areas: 
+    "hero hero"
+    "subscription features";
+    grid-template-columns: 1fr 1fr;
+  max-width: 39.6875rem;
+  margin: 10.1875rem auto 0 auto;
+}
+
+section {
+  padding: 2.5rem;
+}
+
+h1, h2, .guarantee, .price, .cta-link {
+  font-weight: 700;
+}
+
+p, .price::after {
+  font-weight: 400;
+}
+
+h1 {
+  color: var(--cyan);
+  font-size: 1.5rem;
+  letter-spacing: -.3px;
+  line-height: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+h2, .guarantee {
+  font-size: 1.125rem;
+  letter-spacing: -.22px;
+  line-height: 1.3125rem;
+  margin-bottom: 1.125rem;
+}
+
+p, .cta-link {
+  letter-spacing: -.2px;
+}
+
+.copy {
+  color: var(--grayish-blue);
+  line-height: 1.625rem;
+  letter-spacing: -.2px;
+}
+
+h2, .price, p, .cta-link {
+  color: white;
+}
+
+.price {
+  display: flex;
+  font-size: 2rem;
+  letter-spacing: -.4px;
+  line-height: 2.338125rem;
+  margin-bottom: .25rem;
+  align-items: center;
+}
+
+.price::after {
+  color: hsl(0, 0%, 100%, .5);
+  content: "per month";
+  font-size: 1rem;
+  letter-spacing: -.2px;
+  line-height: 1.625rem;
+  margin-left: .6875rem;
+}
+
+.feature {
+  color: hsl(0, 0%, 100%, .75);
+  font-weight: 400;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  letter-spacing: -.17px;
+  list-style: none;
+}
+
+.guarantee {
+  color: var(--bright-yellow);
+  margin-bottom: .6875rem;
+}
+
+.trial  {
+  margin-bottom: 1.625rem;
+}
+
+button {
+  background-color: var(--bright-yellow);
+  border: none;
+  border-radius: .3125rem;
+  box-shadow: 0px 10px 10px 0px hsla(0, 0%, 0%, 0.1);
+  width: 14.8125rem;
+  height: 3rem;
+}
+
+.cta-link {
+  text-decoration: none;
+}
+
+.hero {
+  background-color: white;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  grid-area: hero;
+}
+
+.subscription {
+  background-color: var(--cyan);
+  border-bottom-left-radius: .5rem;
+  grid-area: subscription;
+}
+
+.features {
+  background: var(--light-cyan);
+  border-bottom-right-radius: .5rem;
+  grid-area: features;
+}
+
+@media (max-width: 725px) {
+  main {
+    max-width: 19.4375rem;
+    grid-template-areas: 
+      "hero"
+      "subscription"
+      "features";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin-top: 4.5rem;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+    line-height: 1.4625rem;
+    letter-spacing: -.25px;
+    margin-bottom: 1.5rem;
+  }
+
+  .guarantee {
+    font-size: .9375rem;
+    line-height: 1.25rem;
+    letter-spacing: -.19px;
+    margin-bottom: 1rem;
+  }
+
+  .copy {
+    font-size: .875rem;
+    line-height: 1.625rem;
+    letter-spacing: -.17px;
+    margin-bottom: .3125rem;
+  }
+
+  section {
+    padding: 1.75rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  .subscription {
+    border-bottom-left-radius: 0px;
+  }
+
+  .features {
+    border-bottom-right-radius: 0px;
+  }
+
+  button {
+    width: 16.4375rem;
+  }
+}
